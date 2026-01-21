@@ -1,0 +1,6 @@
+name = "portfolio-admin-oauth"
+main = "src/index.ts"
+compatibility_date = "2025-01-21"
+
+[vars]
+ALLOWED_ORIGIN = "https://portfolio-5qp.pages.dev"

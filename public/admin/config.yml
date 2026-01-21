@@ -2,7 +2,7 @@ backend:
   name: github
   repo: genghis-moromisa/portfolio
   branch: main
-  base_url: https://decap-cms-oauth.netlify.app
+  base_url: https://portfolio-admin-oauth.moromingo.workers.dev
   auth_endpoint: auth
 
 media_folder: "public/uploads"
