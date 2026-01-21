@@ -1,0 +1,7 @@
+# Ignore unrelated files in workspace
+*.pdf
+*.zip
+node_modules
+.next
+out
+.DS_Store

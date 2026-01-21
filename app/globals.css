@@ -1,0 +1,80 @@
+@import '@fontsource/cormorant-garamond/400.css';
+@import '@fontsource/cormorant-garamond/500.css';
+@import '@fontsource/cormorant-garamond/600.css';
+@import '@fontsource/cormorant-garamond/700.css';
+@import '@fontsource/space-grotesk/400.css';
+@import '@fontsource/space-grotesk/500.css';
+@import '@fontsource/space-grotesk/600.css';
+@import '@fontsource/space-grotesk/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: #f6f4f0;
+  --text: #171614;
+  --muted: #5f5b52;
+  --border: #d6d1c6;
+  --accent: #9a7a45;
+  --accent-soft: #efe7da;
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --surface: #12110f;
+  --text: #f3efe7;
+  --muted: #b6b0a4;
+  --border: #2c2822;
+  --accent: #c9a76a;
+  --accent-soft: #1a1916;
+  color-scheme: dark;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-surface text-text antialiased;
+  font-feature-settings: 'liga' 1, 'kern' 1;
+  background-image:
+    radial-gradient(1200px 600px at 20% 0%, rgba(154, 122, 69, 0.12), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(0, 0, 0, 0.08), transparent 65%);
+}
+
+a {
+  @apply text-text transition-colors;
+}
+
+a:hover {
+  @apply text-accent;
+}
+
+::selection {
+  background-color: rgba(154, 122, 69, 0.25);
+}
+
+.prose {
+  --tw-prose-body: var(--text);
+  --tw-prose-headings: var(--text);
+  --tw-prose-lead: var(--muted);
+  --tw-prose-links: var(--accent);
+  --tw-prose-bold: var(--text);
+  --tw-prose-counters: var(--muted);
+  --tw-prose-bullets: var(--muted);
+  --tw-prose-hr: var(--border);
+  --tw-prose-quotes: var(--text);
+  --tw-prose-quote-borders: var(--border);
+  --tw-prose-captions: var(--muted);
+  --tw-prose-code: var(--text);
+  --tw-prose-pre-code: var(--text);
+  --tw-prose-pre-bg: var(--accent-soft);
+  --tw-prose-th-borders: var(--border);
+  --tw-prose-td-borders: var(--border);
+}
+
+.prose code::before,
+.prose code::after {
+  content: '';
+}

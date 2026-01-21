@@ -1,0 +1,8 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F6F4F0"/>
+  <circle cx="220" cy="120" r="260" fill="#EFE7DA"/>
+  <circle cx="980" cy="80" r="200" fill="#E7DED0"/>
+  <rect x="120" y="150" width="960" height="330" rx="48" fill="#12110F"/>
+  <text x="180" y="300" fill="#F3EFE7" font-family="Cormorant Garamond, serif" font-size="64" letter-spacing="-2">Kaito Mori</text>
+  <text x="180" y="360" fill="#C9A76A" font-family="Space Grotesk, sans-serif" font-size="20" letter-spacing="8">PORTFOLIO 2025</text>
+</svg>
