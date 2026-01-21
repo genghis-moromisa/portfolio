@@ -16,18 +16,22 @@ export default function HomePage() {
   return (
     <div className="flex flex-col gap-16">
       <section className="flex flex-col gap-8">
-        <p className="text-xs uppercase tracking-[0.35em] text-muted">{siteData.home.eyebrow}</p>
+        {siteData.home.eyebrow ? (
+          <p className="text-xs uppercase tracking-[0.35em] text-muted">{siteData.home.eyebrow}</p>
+        ) : null}
         <h1 className="text-4xl font-serif tracking-tightest sm:text-6xl">
-          {siteData.home.headline}
+          {siteData.home.headline || `${siteData.name} — ${siteData.roleTagline}`}
         </h1>
-        <p className="max-w-2xl text-lg leading-relaxed text-muted">
-          {siteData.home.intro}
-        </p>
-        <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.3em] text-muted">
-          {siteData.home.services.map((service) => (
-            <span key={service}>{service}</span>
-          ))}
-        </div>
+        {siteData.home.intro ? (
+          <p className="max-w-2xl text-lg leading-relaxed text-muted">{siteData.home.intro}</p>
+        ) : null}
+        {siteData.home.services.length ? (
+          <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.3em] text-muted">
+            {siteData.home.services.map((service) => (
+              <span key={service}>{service}</span>
+            ))}
+          </div>
+        ) : null}
         <div className="flex flex-wrap gap-4">
           <Link
             href="/projects"
@@ -73,21 +77,27 @@ export default function HomePage() {
         <SectionHeading title="Writing" eyebrow="Essays">
           Notes on systems thinking, typography, and building for longevity.
         </SectionHeading>
-        <div className="grid gap-4">
-          {recentPosts.map((post) => (
-            <Link
-              key={post.slug}
-              href={`/writing/${post.slug}`}
-              className="rounded-2xl border border-border px-5 py-4"
-            >
-              <h3 className="text-xl font-serif tracking-tightest">{post.meta.title}</h3>
-              <p className="mt-2 text-sm text-muted">{post.meta.summary}</p>
+        {recentPosts.length ? (
+          <>
+            <div className="grid gap-4">
+              {recentPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/writing/${post.slug}`}
+                  className="rounded-2xl border border-border px-5 py-4"
+                >
+                  <h3 className="text-xl font-serif tracking-tightest">{post.meta.title}</h3>
+                  <p className="mt-2 text-sm text-muted">{post.meta.summary}</p>
+                </Link>
+              ))}
+            </div>
+            <Link href="/writing" className="text-xs uppercase tracking-[0.3em] text-accent">
+              Read all writing
             </Link>
-          ))}
-        </div>
-        <Link href="/writing" className="text-xs uppercase tracking-[0.3em] text-accent">
-          Read all writing
-        </Link>
+          </>
+        ) : (
+          <p className="text-sm text-muted">Writing posts will appear here soon.</p>
+        )}
       </section>
     </div>
   );

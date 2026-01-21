@@ -1,34 +1,30 @@
 {
-  "name": "Kaito Mori",
-  "roleTagline": "Product + Brand Systems",
+  "name": "諸見謝ジェンジス / Genghis Moromisa",
+  "roleTagline": "Interpreter (Por-Jp, Es-Jp), Japanese Teacher (JSL)",
   "home": {
-    "eyebrow": "Portfolio · 2025",
-    "headline": "Crafting calm, high-end digital experiences for luxury brands and future-facing teams.",
-    "intro": "I help premium products communicate with restraint and precision. My practice blends design systems, editorial storytelling, and performance-first engineering.",
-    "services": ["Design Systems", "Frontend Engineering", "Brand Experience"],
+    "eyebrow": "",
+    "headline": "",
+    "intro": "",
+    "services": [],
     "ctaPrimary": "View Projects",
     "ctaSecondary": "Start a Conversation"
   },
   "about": {
-    "intro": "I partner with design and product leaders to elevate premium digital experiences with a focus on typography, pacing, and system integrity.",
-    "paragraphs": [
-      "Based in Tokyo, I blend visual design and engineering to build sites that feel quiet, intentional, and fast. My work spans brand platforms, digital editorials, and product marketing for studios and global teams.",
-      "When I am not shipping, I study material archives, photograph modernist interiors, and prototype new narrative layouts."
-    ],
-    "focus": "Design systems, frontend architecture, editorial storytelling.",
-    "services": "Digital art direction, web development, performance optimization, launch strategy."
+    "intro": "toshofind管理人",
+    "paragraphs": ["大阪教育大学"],
+    "focus": "",
+    "services": ""
   },
   "contact": {
-    "availability": "Currently taking on a select number of brand platform and editorial builds for 2025.",
-    "email": "studio@kaitomori.com",
+    "availability": "",
+    "email": "youtentm@gmail.com",
     "socials": [
-      {"label": "LinkedIn", "url": "https://www.linkedin.com"},
-      {"label": "Behance", "url": "https://www.behance.net"},
-      {"label": "Instagram", "url": "https://www.instagram.com"}
+      {"label": "Truth Social", "url": "https://truthsocial.com/@genghismoromisa"},
+      {"label": "X", "url": "https://x.com/dekaiainetbigen"}
     ]
   },
   "footer": {
-    "note": "© 2025 Kaito Mori. Crafted with intent.",
-    "location": "Tokyo · Remote"
+    "note": "© 2025 諸見謝ジェンジス / Genghis Moromisa",
+    "location": "Nishinomiya, Hyogo"
   }
 }

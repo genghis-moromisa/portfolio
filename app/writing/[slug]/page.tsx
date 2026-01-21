@@ -3,6 +3,8 @@ import Link from 'next/link';
 
 import { renderMarkdown, getPostBySlug, getWritingSlugs } from '@/lib/markdown';
 
+export const dynamicParams = false;
+
 type WritingPageProps = {
   params: {
     slug: string;

@@ -15,16 +15,22 @@ export default function AboutPage() {
         {siteData.about.paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
-        <div className="grid gap-4 rounded-3xl border border-border bg-accentSoft p-6">
-          <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-muted">Focus</p>
-            <p className="mt-2 text-lg text-text">{siteData.about.focus}</p>
+        {siteData.about.focus || siteData.about.services ? (
+          <div className="grid gap-4 rounded-3xl border border-border bg-accentSoft p-6">
+            {siteData.about.focus ? (
+              <div>
+                <p className="text-xs uppercase tracking-[0.3em] text-muted">Focus</p>
+                <p className="mt-2 text-lg text-text">{siteData.about.focus}</p>
+              </div>
+            ) : null}
+            {siteData.about.services ? (
+              <div>
+                <p className="text-xs uppercase tracking-[0.3em] text-muted">Services</p>
+                <p className="mt-2 text-lg text-text">{siteData.about.services}</p>
+              </div>
+            ) : null}
           </div>
-          <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-muted">Services</p>
-            <p className="mt-2 text-lg text-text">{siteData.about.services}</p>
-          </div>
-        </div>
+        ) : null}
       </div>
     </div>
   );

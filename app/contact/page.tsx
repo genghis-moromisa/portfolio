@@ -9,7 +9,7 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col gap-10">
       <SectionHeading title="Contact" eyebrow="Availability">
-        {siteData.contact.availability}
+        {siteData.contact.availability || undefined}
       </SectionHeading>
       <div className="grid gap-6 rounded-3xl border border-border bg-accentSoft p-8">
         <div className="flex flex-col gap-2">
