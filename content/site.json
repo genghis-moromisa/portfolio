@@ -1,0 +1,34 @@
+{
+  "name": "Kaito Mori",
+  "roleTagline": "Product + Brand Systems",
+  "home": {
+    "eyebrow": "Portfolio · 2025",
+    "headline": "Crafting calm, high-end digital experiences for luxury brands and future-facing teams.",
+    "intro": "I help premium products communicate with restraint and precision. My practice blends design systems, editorial storytelling, and performance-first engineering.",
+    "services": ["Design Systems", "Frontend Engineering", "Brand Experience"],
+    "ctaPrimary": "View Projects",
+    "ctaSecondary": "Start a Conversation"
+  },
+  "about": {
+    "intro": "I partner with design and product leaders to elevate premium digital experiences with a focus on typography, pacing, and system integrity.",
+    "paragraphs": [
+      "Based in Tokyo, I blend visual design and engineering to build sites that feel quiet, intentional, and fast. My work spans brand platforms, digital editorials, and product marketing for studios and global teams.",
+      "When I am not shipping, I study material archives, photograph modernist interiors, and prototype new narrative layouts."
+    ],
+    "focus": "Design systems, frontend architecture, editorial storytelling.",
+    "services": "Digital art direction, web development, performance optimization, launch strategy."
+  },
+  "contact": {
+    "availability": "Currently taking on a select number of brand platform and editorial builds for 2025.",
+    "email": "studio@kaitomori.com",
+    "socials": [
+      {"label": "LinkedIn", "url": "https://www.linkedin.com"},
+      {"label": "Behance", "url": "https://www.behance.net"},
+      {"label": "Instagram", "url": "https://www.instagram.com"}
+    ]
+  },
+  "footer": {
+    "note": "© 2025 Kaito Mori. Crafted with intent.",
+    "location": "Tokyo · Remote"
+  }
+}

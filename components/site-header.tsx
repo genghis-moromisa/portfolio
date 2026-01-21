@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import siteData from '@/content/site.json';
+
 import { ThemeToggle } from './theme-toggle';
 
 const navItems = [
@@ -15,9 +17,9 @@ export function SiteHeader() {
     <header className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-6 pb-10 pt-8 sm:flex-row sm:items-center sm:justify-between">
       <div className="flex flex-col gap-2">
         <Link href="/" className="text-2xl font-serif tracking-tightest">
-          Kaito Mori
+          {siteData.name}
         </Link>
-        <p className="text-sm uppercase tracking-[0.28em] text-muted">Product + Brand Systems</p>
+        <p className="text-sm uppercase tracking-[0.28em] text-muted">{siteData.roleTagline}</p>
       </div>
       <div className="flex flex-col items-start gap-4 sm:items-end">
         <nav className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.25em] text-muted">

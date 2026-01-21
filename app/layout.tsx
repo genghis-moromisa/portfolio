@@ -5,27 +5,28 @@ import type { Metadata } from 'next';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { ThemeScript } from '@/components/theme-script';
+import siteData from '@/content/site.json';
 
 const siteUrl = 'https://example.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Kaito Mori — Portfolio',
-    template: '%s — Kaito Mori'
+    default: `${siteData.name} — Portfolio`,
+    template: `%s — ${siteData.name}`
   },
   description: 'Minimal, luxury-minded digital design and engineering for modern brands.',
   openGraph: {
-    title: 'Kaito Mori — Portfolio',
+    title: `${siteData.name} — Portfolio`,
     description: 'Minimal, luxury-minded digital design and engineering for modern brands.',
     url: siteUrl,
-    siteName: 'Kaito Mori',
+    siteName: siteData.name,
     images: ['/og.svg'],
     type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kaito Mori — Portfolio',
+    title: `${siteData.name} — Portfolio`,
     description: 'Minimal, luxury-minded digital design and engineering for modern brands.',
     images: ['/og.svg']
   }

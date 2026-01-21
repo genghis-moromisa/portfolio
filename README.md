@@ -18,3 +18,4 @@ npm run dev
 
 - Update the site URL in `app/layout.tsx`, `app/robots.ts`, and `app/sitemap.ts` before deployment.
 - Writing content lives in `content/writing` as Markdown with frontmatter.
+- Admin UI (no-code editing) is available at `/admin`. Log in with GitHub to edit Projects, Writing, and Site content.

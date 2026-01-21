@@ -1,0 +1,86 @@
+backend:
+  name: github
+  repo: genghis-moromisa/portfolio
+  branch: main
+  base_url: https://decap-cms-oauth.netlify.app
+  auth_endpoint: auth
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "writing"
+    label: "Writing"
+    folder: "content/writing"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "projects"
+    label: "Projects"
+    files:
+      - label: "Projects"
+        name: "projects"
+        file: "content/projects.json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Tags", name: "tags", widget: "list" }
+              - { label: "Link", name: "link", widget: "string", required: false }
+
+  - name: "site"
+    label: "Site"
+    files:
+      - label: "Site Settings"
+        name: "site"
+        file: "content/site.json"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Role Tagline", name: "roleTagline", widget: "string" }
+          - label: "Home"
+            name: "home"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Services", name: "services", widget: "list" }
+              - { label: "Primary CTA", name: "ctaPrimary", widget: "string" }
+              - { label: "Secondary CTA", name: "ctaSecondary", widget: "string" }
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list" }
+              - { label: "Focus", name: "focus", widget: "text" }
+              - { label: "Services", name: "services", widget: "text" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Availability", name: "availability", widget: "text" }
+              - { label: "Email", name: "email", widget: "string" }
+              - label: "Socials"
+                name: "socials"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Note", name: "note", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }

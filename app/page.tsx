@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import { SectionHeading } from '@/components/section-heading';
 import { projects } from '@/content/projects';
+import siteData from '@/content/site.json';
 import { getAllPosts } from '@/lib/markdown';
 
 export const metadata = {
@@ -15,31 +16,30 @@ export default function HomePage() {
   return (
     <div className="flex flex-col gap-16">
       <section className="flex flex-col gap-8">
-        <p className="text-xs uppercase tracking-[0.35em] text-muted">Portfolio · 2025</p>
+        <p className="text-xs uppercase tracking-[0.35em] text-muted">{siteData.home.eyebrow}</p>
         <h1 className="text-4xl font-serif tracking-tightest sm:text-6xl">
-          Crafting calm, high-end digital experiences for luxury brands and future-facing teams.
+          {siteData.home.headline}
         </h1>
         <p className="max-w-2xl text-lg leading-relaxed text-muted">
-          I help premium products communicate with restraint and precision. My practice blends design systems,
-          editorial storytelling, and performance-first engineering.
+          {siteData.home.intro}
         </p>
         <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.3em] text-muted">
-          <span>Design Systems</span>
-          <span>Frontend Engineering</span>
-          <span>Brand Experience</span>
+          {siteData.home.services.map((service) => (
+            <span key={service}>{service}</span>
+          ))}
         </div>
         <div className="flex flex-wrap gap-4">
           <Link
             href="/projects"
             className="rounded-full border border-accent bg-accent px-6 py-3 text-xs uppercase tracking-[0.3em] text-white"
           >
-            View Projects
+            {siteData.home.ctaPrimary}
           </Link>
           <Link
             href="/contact"
             className="rounded-full border border-border px-6 py-3 text-xs uppercase tracking-[0.3em] text-muted"
           >
-            Start a Conversation
+            {siteData.home.ctaSecondary}
           </Link>
         </div>
       </section>
